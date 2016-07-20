@@ -1,0 +1,1 @@
+This is Vitaliy Golubivskyy's Front Study Project.

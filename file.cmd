@@ -1,0 +1,1 @@
+echo "STUDY PROJECT"
