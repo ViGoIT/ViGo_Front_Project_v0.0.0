@@ -1,52 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Hello World</title>
-		<link href="css/style.css" type="text/css" rel="stylesheet" />		
+		<meta charset="UTF-8" />
+		<title>Hello World Team Projects</title>
+		<link rel="Stylesheet" href="css/reset.css" type="text/css"/>
+		<link rel="Stylesheet" href="css/style.css" type="text/css"/>
 	</head>
 	<body>
-	 <div id="envelope">
-		<header>
-		</header>
+	 <main class="envelope">
+		<button class="nav-button"><img src="img/nav_button_org.png" alt="Filter Button"/></button>
 		
-			<aside>
-				<input type="search"/>
-				<form>
-					tut budetdatepicker					
+		<section class="content">
+		
+		<aside class="left-right-nav-menu">
+			<div class="envelope-for-menu-input">
+				<form novalidate action="#">
+					<input class="menu-input" placeholder="search:" type="search" id="search" name="search"/>
 				</form>
+				<form action="#" method="post">				
+					<fieldset class="checkbox-field menu-input">
+						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="web"/>web</label></div>
+						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="desktop"/>desktop</label></div>
+						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="mobile"/>mobile</label></div>
+						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="support"/>support</label></div>
+					</fieldset>
+					<input class="menu-input" type="date" value="12-04-1986">					
+				</form>
+			<div>
+		</aside>
+			<div class="table-content">
+				<table class="tdata" summary="This table lists the current projects of Hello World Team Projects. Also Members and Dates.">			 
+					<thead class="th-cells-color">
+						<tr>
+							<th class="left-column table-cell-padding">project name</th>
+							<th class="set-font-weight-to-regular table-cell-padding">due date</th>
+							<th class="set-font-weight-to-regular table-cell-padding">created</th>
+							<th class="set-font-weight-to-regular table-cell-padding">members</th>
+							<th class="set-font-weight-to-regular table-cell-padding">type</th>
+							<th class="set-font-weight-to-regular table-cell-padding">status</th>
+							<th class="set-font-weight-to-regular table-cell-padding">customer</th>
+							<th><button class="btn-plus"><img src="img/btn_plus.png" alt="add"/></button></th>
+						</tr>
+						<tr class="reset-background">
+							<th colspan="8"><hr class="table-hr-line"></th>						
+						</tr>
+					</thead>
+				<tbody>
+				
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+				 </tbody>
+				</table>
+			</div>	
+			<aside class="left-right-nav-menu">	
+				<form action="#">
+					 <input class="menu-input" type="text" value="project name:" name="right-menu-project-name"/>
+					 <input class="menu-input" type="date" value="due date" name="right-menu-due-date"/>
+					 <input class="menu-input" type="datetime" value="created" name="right-menu-created"/>
+					 <input class="menu-input" type="text" value="members:" name="right-menu-members" list="members"/>
+					 <datalist id="members">
+						<option value="petro">
+						<option value="vasyl">
+						<option value="ivan">
+					 </datalist>
+					 <input class="menu-input" type="text" value="type:" name="right-menu-type" list="type"/>
+					 <datalist id="type">
+						<option value="web">
+						<option value="desktop">
+						<option value="mobile">
+						<option value="support">
+					 </datalist>
+					 <input class="menu-input" type="text" value="customer:" name="right-menu-customer" list="customer"/>
+					 <datalist id="customer">
+						<option value="volvo">
+						<option value="evry">
+						<option value="electrolux">
+						<option value="nokia">
+					 </datalist>
+					 <input class="menu-input" type="submit" name="create" value="btn-create"/>
+				</form>				
 			</aside>
-		
-		<section>
-			<button></button>
-			<table>
-			 <tbody>
-				<tr>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><button></button></td>
-				</tr>
-			 </tbody>
-			</table>
 		</section>
-		<footer>
-			<p></p>
+		
+		<footer class="footer">
+			<p>infopulse courses dashboard &#64 2016</p>
 		</footer>
-	 </div>
+	 </main>
 	</body>
+	
 </html>

@@ -1,3 +1,172 @@
+html,
 body {
-    background: red;
+    text-transform: uppercase;
+    height: 100%;
+}
+
+footer p{
+    font-size: 1.313rem;
+    text-align: center;
+    padding-top: 1em;
+}
+
+tr:nth-child(even){
+    background: #0f1012;	
+}
+
+td,
+.table-cell-padding{
+	padding: 1.1em 1em 1.1em 1em;
+}
+
+.envelope {
+	background: #000;
+    display: table;
+    width: 100%;
+	color: #fff;
+	min-width: 1300px;
+	max-width: 1800px;
+}
+
+.content {
+    width: 100%;
+	min-width: 1300px;
+	max-width: 1800px;
+	
+}
+
+.table-content{
+	width: 60%;
+	min-width: 800px;
+	max-width: 1800px;
+	background: #0a0b0d;
+	/*display: inline-block;*/
+	float: left;	
+	margin-top: 0em;
+}
+
+.tdata {
+    /* selector by tag: that is because it is 0001 and there is only one table on the current page, in other case it is better to  use class*/
+    /*border: 1px solid #ececec;*/
+    font: 1.125rem/1.5 Calibri, Verdana, Arial, Tahoma, sans-serif;
+    /*background: #0a0b0d;*/
+	background: none;
+    width: 96%;
+	min-width: 768px;
+	max-width: 1728px;
+    float: left;    
+    text-align: center;
+    margin-top: 1em;
+	margin-left: 18px;
+	
+}
+
+.table-hr-line{
+	background: #737374;
+	border: none;
+	height: 1.5px;
+	margin-top: -0.5rem;
+}
+
+tr.reset-background{
+	background: #0a0b0d;
+}
+
+
+.footer {
+    background: #e67817;
+    color: #fff;
+    width: 100%;
+    height: 65px;
+}
+
+.content,
+.footer {
+    display: table-row;
+}
+
+
+.set-font-weight-to-regular {
+    font-weight: normal;
+}
+
+.left-column {
+    font-weight: bold;
+	/*border-right: 1px solid #fff;*/
+}
+
+.left-right-nav-menu{
+    float: left;
+    width: 19%;
+	min-width: 240px;
+	max-width: 300px;
+	margin-top: 5rem;
+	
+}
+
+.th-cells-color{
+    color: #e67817;
+}
+
+.envelope-for-menu-input1{
+	margin-top: 5rem;
+}
+
+.menu-input{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font: 1rem/1.5 Calibri, Verdana, Arial, Tahoma, sans-serif;
+	width: 80%;	
+	padding-bottom: 1.125em;
+	padding-top: 1.125em;
+	padding-left: 0.75em;
+	margin-bottom: 1.875em;
+	color: #fff;
+	background: #221203;
+	border: none;	
+	border-bottom: 1px solid #e67817;
+	text-transform: uppercase;	
+}
+
+.checkbox-field{
+	/*border: 1px solid #fff;*/
+	margin: 0 auto;
+	margin-bottom: 1.875rem;
+	background: #0d0d0d;
+	height: 6em;
+}
+
+.block-input{
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+	width: 48%;
+	float: left;
+}
+
+tr:hover td {
+    background: #353e44;
+}
+
+.nav-button{
+	width: 32px;
+	height: 22px;
+	background: none;
+	border:none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-left: -8px;
+}
+
+.btn-recycle{
+	border: none;
+	background: none;
+	width: 35px;
+	height: 41px;
+}
+
+.btn-plus{
+	border: none;
+	background: none;
 }
