@@ -7,16 +7,15 @@ body {
 footer p{
     font-size: 1.313rem;
     text-align: center;
-    padding-top: 1em;
+    padding-top: 1em;	
 }
 
 tr:nth-child(even){
     background: #0f1012;	
 }
 
-td,
 .table-cell-padding{
-	padding: 1.1em 1em 1.1em 1em;
+	padding-bottom: 1rem;	
 }
 
 .envelope {
@@ -26,10 +25,11 @@ td,
 	color: #fff;
 	min-width: 1300px;
 	max-width: 1800px;
+	height: 100%;
 }
 
 .content {
-    width: 100%;
+    width: 100%;	
 	min-width: 1300px;
 	max-width: 1800px;
 	
@@ -45,20 +45,24 @@ td,
 	margin-top: 0em;
 }
 
-.tdata {
-    /* selector by tag: that is because it is 0001 and there is only one table on the current page, in other case it is better to  use class*/
-    /*border: 1px solid #ececec;*/
-    font: 1.125rem/1.5 Calibri, Verdana, Arial, Tahoma, sans-serif;
-    /*background: #0a0b0d;*/
+.tdata {    
+    font: 1.125rem/1.5 Calibri, Verdana, Arial, Tahoma, sans-serif;    
 	background: none;
     width: 96%;
 	min-width: 768px;
 	max-width: 1728px;
     float: left;    
-    text-align: center;
+    text-align: center;	
     margin-top: 1em;
 	margin-left: 18px;
+	border-collapse: separate;
+	border-spacing: 0px 10px;
 	
+}
+
+td,
+.td_vertical-align {
+	vertical-align: middle;
 }
 
 .table-hr-line{
@@ -66,6 +70,7 @@ td,
 	border: none;
 	height: 1.5px;
 	margin-top: -0.5rem;
+	
 }
 
 tr.reset-background{
@@ -169,4 +174,14 @@ tr:hover td {
 .btn-plus{
 	border: none;
 	background: none;
+}
+
+.btn-create {
+	width: 84%;
+	background: #e67817;
+	/*text-align: left;*/
+}
+
+.menu-select-styling{
+	color: #fff;
 }

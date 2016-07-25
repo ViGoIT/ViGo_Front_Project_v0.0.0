@@ -2,12 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Hello World Team Projects</title>
+		<title>"Hello World" Team Projects</title>
 		<link rel="Stylesheet" href="css/reset.css" type="text/css"/>
 		<link rel="Stylesheet" href="css/style.css" type="text/css"/>
 	</head>
 	<body>
 	 <main class="envelope">
+	 
 		<button class="nav-button"><img src="img/nav_button_org.png" alt="Filter Button"/></button>
 		
 		<section class="content">
@@ -24,7 +25,7 @@
 						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="mobile"/>mobile</label></div>
 						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="support"/>support</label></div>
 					</fieldset>
-					<input class="menu-input" type="date" value="12-04-1986">					
+					<input class="menu-input" type="date" placeholder="12-04-1986" name="left-menu-project-date"/>					
 				</form>
 			<div>
 		</aside>
@@ -32,13 +33,13 @@
 				<table class="tdata" summary="This table lists the current projects of Hello World Team Projects. Also Members and Dates.">			 
 					<thead class="th-cells-color">
 						<tr>
-							<th class="left-column table-cell-padding">project name</th>
-							<th class="set-font-weight-to-regular table-cell-padding">due date</th>
-							<th class="set-font-weight-to-regular table-cell-padding">created</th>
-							<th class="set-font-weight-to-regular table-cell-padding">members</th>
-							<th class="set-font-weight-to-regular table-cell-padding">type</th>
-							<th class="set-font-weight-to-regular table-cell-padding">status</th>
-							<th class="set-font-weight-to-regular table-cell-padding">customer</th>
+							<th class="left-column td_vertical-align"><span>project name</span></th>
+							<th class="set-font-weight-to-regular td_vertical-align">due date</th>
+							<th class="set-font-weight-to-regular td_vertical-align">created</th>
+							<th class="set-font-weight-to-regular td_vertical-align">members</th>
+							<th class="set-font-weight-to-regular td_vertical-align">type</th>
+							<th class="set-font-weight-to-regular td_vertical-align">status</th>
+							<th class="set-font-weight-to-regular td_vertical-align">customer</th>
 							<th><button class="btn-plus"><img src="img/btn_plus.png" alt="add"/></button></th>
 						</tr>
 						<tr class="reset-background">
@@ -91,31 +92,32 @@
 				</table>
 			</div>	
 			<aside class="left-right-nav-menu">	
-				<form action="#">
-					 <input class="menu-input" type="text" value="project name:" name="right-menu-project-name"/>
-					 <input class="menu-input" type="date" value="due date" name="right-menu-due-date"/>
-					 <input class="menu-input" type="datetime" value="created" name="right-menu-created"/>
-					 <input class="menu-input" type="text" value="members:" name="right-menu-members" list="members"/>
-					 <datalist id="members">
-						<option value="petro">
-						<option value="vasyl">
-						<option value="ivan">
-					 </datalist>
-					 <input class="menu-input" type="text" value="type:" name="right-menu-type" list="type"/>
-					 <datalist id="type">
-						<option value="web">
-						<option value="desktop">
-						<option value="mobile">
-						<option value="support">
-					 </datalist>
-					 <input class="menu-input" type="text" value="customer:" name="right-menu-customer" list="customer"/>
-					 <datalist id="customer">
-						<option value="volvo">
-						<option value="evry">
-						<option value="electrolux">
-						<option value="nokia">
-					 </datalist>
-					 <input class="menu-input" type="submit" name="create" value="btn-create"/>
+				<form id="left-menu-form" action="#">
+					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name"/>
+					 <input class="menu-input" type="date" placeholder="due date" name="right-menu-due-date"/>
+					 <input class="menu-input" type="datetime" placeholder="created" name="right-menu-created"/>
+					 <select class="menu-input menu-select-styling" name="select-members" autocomplete="off">
+						<option disabled multiple form="left-menu-form" value="members" selected >members:</option>
+						<option value="petro">petro</option>
+						<option value="vasyl">vasyl</option>
+						<option value="ivan">ivan</option>						
+					 </select>
+					 <select class="menu-input menu-select-styling" name="select-type" autocomplete="off">
+						<option disabled multiple form="left-menu-form" value="type" selected >type:</option>
+						<option value="web">web</option>
+						<option value="desktop">desktop</option>
+						<option value="mobile">mobile</option>						
+						<option value="support">support</option>
+					 </select>
+					<select class="menu-input menu-select-styling" name="select-customer" autocomplete="off">
+						<option disabled multiple form="left-menu-form" value="customer" selected >customer:</option>
+						<option value="evry">evry</option>
+						<option value="volvo">volvo</option>
+						<option value="electrolux">electrolux</option>						
+						<option value="ikea">ikea</option>
+					 </select>
+					 <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
+					 
 				</form>				
 			</aside>
 		</section>
