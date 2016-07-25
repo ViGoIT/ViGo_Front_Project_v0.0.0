@@ -185,3 +185,8 @@ tr:hover td {
 .menu-select-styling{
 	color: #fff;
 }
+
+.btn-go {
+	padding-left: 10px;
+	margin-bottom: 10px;
+}

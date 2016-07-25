@@ -10,13 +10,13 @@
 	 <main class="envelope">
 	 
 		<button class="nav-button"><img src="img/nav_button_org.png" alt="Filter Button"/></button>
-		
-		<section class="content">
+		<!--section shoud ibclude <h1-h6>, that is why changed it to <div>-->
+		<div class="content">
 		
 		<aside class="left-right-nav-menu">
-			<div class="envelope-for-menu-input">
+			
 				<form novalidate action="#">
-					<input class="menu-input" placeholder="search:" type="search" id="search" name="search"/>
+					<input class="menu-input" placeholder="search:" type="search" id="search" name="search"/><!--<img class="btn-go" src="img/search_button.png" alt="go">-->
 				</form>
 				<form action="#" method="post">				
 					<fieldset class="checkbox-field menu-input">
@@ -25,12 +25,12 @@
 						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="mobile"/>mobile</label></div>
 						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="support"/>support</label></div>
 					</fieldset>
-					<input class="menu-input" type="date" placeholder="12-04-1986" name="left-menu-project-date"/>					
+					<input class="menu-input" type="text" placeholder="12-04-1986" name="left-menu-project-date"/>					
 				</form>
-			<div>
+			
 		</aside>
 			<div class="table-content">
-				<table class="tdata" summary="This table lists the current projects of Hello World Team Projects. Also Members and Dates.">			 
+				<table class="tdata">			 
 					<thead class="th-cells-color">
 						<tr>
 							<th class="left-column td_vertical-align"><span>project name</span></th>
@@ -94,23 +94,23 @@
 			<aside class="left-right-nav-menu">	
 				<form id="left-menu-form" action="#">
 					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name"/>
-					 <input class="menu-input" type="date" placeholder="due date" name="right-menu-due-date"/>
-					 <input class="menu-input" type="datetime" placeholder="created" name="right-menu-created"/>
+					 <input class="menu-input" type="text" placeholder="due date" name="right-menu-due-date"/>
+					 <input class="menu-input" type="text" placeholder="created" name="right-menu-created"/>
 					 <select class="menu-input menu-select-styling" name="select-members" autocomplete="off">
-						<option disabled multiple form="left-menu-form" value="members" selected >members:</option>
+						<option disabled value="members" selected >members:</option>
 						<option value="petro">petro</option>
 						<option value="vasyl">vasyl</option>
 						<option value="ivan">ivan</option>						
 					 </select>
 					 <select class="menu-input menu-select-styling" name="select-type" autocomplete="off">
-						<option disabled multiple form="left-menu-form" value="type" selected >type:</option>
+						<option disabled value="type" selected >type:</option>
 						<option value="web">web</option>
 						<option value="desktop">desktop</option>
 						<option value="mobile">mobile</option>						
 						<option value="support">support</option>
 					 </select>
 					<select class="menu-input menu-select-styling" name="select-customer" autocomplete="off">
-						<option disabled multiple form="left-menu-form" value="customer" selected >customer:</option>
+						<option disabled value="customer" selected >customer:</option>
 						<option value="evry">evry</option>
 						<option value="volvo">volvo</option>
 						<option value="electrolux">electrolux</option>						
@@ -120,10 +120,10 @@
 					 
 				</form>				
 			</aside>
-		</section>
+		</div>
 		
 		<footer class="footer">
-			<p>infopulse courses dashboard &#64 2016</p>
+			<p>infopulse courses dashboard &#64; 2016</p>
 		</footer>
 	 </main>
 	</body>
