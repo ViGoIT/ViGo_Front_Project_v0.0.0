@@ -4,34 +4,37 @@
 		<meta charset="UTF-8" />
 		<title>"Hello World" Team Projects</title>
 		<link rel="Stylesheet" href="css/reset.css" type="text/css"/>
+		<link rel="Stylesheet" href="css/pikaday.css" type="text/css"/>
 		<link rel="Stylesheet" href="css/style.css" type="text/css"/>
 	</head>
 	<body>
 	<!--section shoud ibclude <h1-h6>, that is why changed it to <div>-->
-	 <div class="envelope">			
+	 <div class="envelope">
 		
-			<aside class="left-right-nav-menu">
-			
-				<button class="nav-button"><img src="img/nav_button_org.png" alt="Filter Button"/></button>
-			
-				<form novalidate action="#">
-					<input class="menu-input" placeholder="search:" type="search" id="search" name="search"/><!--<img class="btn-go" src="img/search_button.png" alt="go">-->
-				</form>
-				<form action="#" method="post">				
-					<fieldset class="checkbox-field menu-input">
-						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="web"/>web</label></div>
-						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="desktop"/>desktop</label></div>
-						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="mobile"/>mobile</label></div>
-						<div class="block-input"><label><input type="checkbox" name="type-of-project" value="support"/>support</label></div>
-					</fieldset>
-					<input class="menu-input" type="text" placeholder="12-04-1986" name="left-menu-project-date"/>					
-				</form>
-			
-			</aside>
+					<aside class="left-right-nav-menu">
+					
+						<button class="nav-button">
+							<img src="img/nav_button_org.png" alt="Filter Button"/>
+						</button>
+					
+						<form novalidate action="#">
+							<input class="menu-input" placeholder="search:" type="search" id="search" name="search"/><!--<img class="btn-go" src="img/search_button.png" alt="go">-->
+						</form>
+						<form action="#" method="post">
+							<fieldset class="checkbox-field menu-input">
+								<div class="block-input"><label><input class="checkbox-style" type="checkbox" name="type-of-project" value="web"/>web</label></div>
+								<div class="block-input"><label><input type="checkbox" name="type-of-project" value="desktop"/>desktop</label></div>
+								<div class="block-input"><label><input type="checkbox" name="type-of-project" value="mobile"/>mobile</label></div>
+								<div class="block-input"><label><input type="checkbox" name="type-of-project" value="support"/>support</label></div>
+							</fieldset>
+							<input id="datepicker-left-menu" class="menu-input" type="date" placeholder="12-04-1986" name="left-menu-project-date"/>
+						</form>
+					
+					</aside>
 			<div class="table-content">
-				<table class="tdata">			 
+				<table class="tdata">
 					<thead class="th-cells-color">
-						<tr>
+						<tr class="table-head-style">
 							<th class="left-column td_vertical-align"><span>project name</span></th>
 							<th class="set-font-weight-to-regular td_vertical-align">due date</th>
 							<th class="set-font-weight-to-regular td_vertical-align">created</th>
@@ -41,12 +44,112 @@
 							<th class="set-font-weight-to-regular td_vertical-align">customer</th>
 							<th><button class="btn-plus"><img src="img/btn_plus.png" alt="add"/></button></th>
 						</tr>
-						<tr class="reset-background">
-							<th colspan="8"><hr class="table-hr-line"></th>						
+						<tr class="reset-background table-head-style">
+							<th colspan="8"><hr class="table-hr-line"></th>
 						</tr>
 					</thead>
-				<tbody>
+				<tbody class="table-body-style">
 				
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td><button class="btn-recycle"><img src="img/recycle_new_s.png" alt="delete"></button></td>
+					</tr>
 					<tr class="tr-hover">
 						<td class="left-column">project name</td>
 						<td>due date</td>
@@ -89,35 +192,35 @@
 					</tr>
 				 </tbody>
 				</table>
-			</div>	
-			<aside class="left-right-nav-menu">	
+			</div>
+			<aside class="left-right-nav-menu">
 				<form id="left-menu-form" action="#">
 					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name"/>
-					 <input class="menu-input" type="text" placeholder="due date" name="right-menu-due-date"/>
-					 <input class="menu-input" type="text" placeholder="created" name="right-menu-created"/>
+					 <input id="datepicker-duedate" class="menu-input" type="text" placeholder="due date" name="right-menu-due-date"/>
+					 <input id="datepicker-created" class="menu-input" type="text" placeholder="created" name="right-menu-created"/>
 					 <select class="menu-input menu-select-styling" name="select-members" autocomplete="off">
 						<option disabled value="members" selected >members:</option>
 						<option value="petro">petro</option>
 						<option value="vasyl">vasyl</option>
-						<option value="ivan">ivan</option>						
+						<option value="ivan">ivan</option>
 					 </select>
 					 <select class="menu-input menu-select-styling" name="select-type" autocomplete="off">
 						<option disabled value="type" selected >type:</option>
 						<option value="web">web</option>
 						<option value="desktop">desktop</option>
-						<option value="mobile">mobile</option>						
+						<option value="mobile">mobile</option>
 						<option value="support">support</option>
 					 </select>
 					<select class="menu-input menu-select-styling" name="select-customer" autocomplete="off">
 						<option disabled value="customer" selected >customer:</option>
 						<option value="evry">evry</option>
 						<option value="volvo">volvo</option>
-						<option value="electrolux">electrolux</option>						
+						<option value="electrolux">electrolux</option>
 						<option value="ikea">ikea</option>
 					 </select>
 					 <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
 					 
-				</form>				
+				</form>
 			</aside>
 		
 		
@@ -125,6 +228,12 @@
 			<p>infopulse courses dashboard &#64; 2016</p>
 		</footer>
 	 </div>
+		<script src="scripts/pikaday.js"></script>
+		<script>
+			var pickerDueDate = new Pikaday({ field: document.getElementById('datepicker-duedate') });
+			var pickerCreateDate = new Pikaday({ field: document.getElementById('datepicker-created') });
+			var pickerLeftMenu = new Pikaday({ field: document.getElementById('datepicker-left-menu') });
+		</script>
 	</body>
 	
 </html>

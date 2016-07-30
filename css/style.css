@@ -10,7 +10,7 @@ footer p{
     padding-top: 1em;	
 }
 
-tr:nth-child(even){
+.tr-hover:nth-child(even){
     background: #0f1012;	
 }
 
@@ -88,9 +88,18 @@ tr.reset-background{
     font-weight: normal;
 }
 
+th.left-column {
+    font-weight: bold;
+	background-image: url(../img/th-proj-line.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
 .left-column {
     font-weight: bold;
-	/*border-right: 1px solid #fff;*/
+	background-image: url(../img/proj-line.png);
+	background-position: right;
+	background-repeat: no-repeat;
 }
 
 .left-right-nav-menu{
@@ -135,6 +144,19 @@ tr.reset-background{
 	height: 6em;
 }
 
+.checkbox-style{
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	
+	height:2em;
+ width:2em;
+ cursor:pointer;
+ position:relative;
+ -webkit-transition: .15s;
+ border-radius:2em;
+ background-color:#000;
+}
+
 .block-input{
 	margin-top: 0.7em;
 	margin-bottom: 0.7em;
@@ -142,8 +164,8 @@ tr.reset-background{
 	float: left;
 }
 
-tr:hover td {
-    background: #353e44;
+.tr-hover:hover td {
+    background-color: #353e44;
 }
 
 .nav-button{
@@ -167,6 +189,7 @@ tr:hover td {
 .btn-plus{
 	border: none;
 	background: none;
+	margin-left: 0.5rem;
 }
 
 .btn-create {
@@ -179,7 +202,36 @@ tr:hover td {
 	color: #fff;
 }
 
-.btn-go {
-	padding-left: 10px;
-	margin-bottom: 10px;
+.table-head-style{
+	 
+      position: relative;
+}
+
+.table-body-style{
+	overflow: auto;
+	 
+}
+
+/* There are described styles which are related to "pikaday" and should be redifine. That is because we are not allowed to change author own styles:*/
+.pika-single{
+	background: #221203;
+	border: none;
+}
+
+.pika-lendar {
+    float: left;
+    width: 237px;
+    margin: 8px;
+}
+
+.pika-button {
+	background: #2c2c2c;
+}
+
+.pika-button:hover {
+	background: #e67817;
+}
+
+.pika-label {
+	background-color: #221203;
 }
