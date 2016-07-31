@@ -10,13 +10,10 @@
 	<body>
 	<!--section should include <h1-h6>, that is why I have changed it to <div>-->
 	 <div class="envelope">
-		
-					<aside class="left-right-nav-menu">
-					
-						<button class="nav-button">
-							<img src="img/nav_button_org.png" alt="Filter Button"/>
+					<aside class="asside-panels">
+						<button class="btn-right-panel">
+							<!--<img src="img/nav_button_org.png" alt="Filter Button"/>-->
 						</button>
-					
 						<form novalidate action="#">
 							<input class="menu-input" placeholder="search:" type="search" id="search" name="search"/>
 						</form>
@@ -35,27 +32,25 @@
 									<label><input type="checkbox" name="type-of-project" value="support"/>support</label>
 								</div>
 							</fieldset>
-							<input id="datepicker-left-menu" class="menu-input" type="date" placeholder="12-04-1986" name="left-menu-project-date"/>
+							<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
+							<input id="datepicker-left-menu" class="menu-input" type="text" placeholder="12-04-1986" name="left-menu-project-date"/>
 						</form>
-					
 					</aside>
 			<div class="table-content">
 				<table class="tdata">
 					<thead class="th-cells-color">
 						<tr class="table-head-style">
-							<th class="left-column td_vertical-align">
+							<th class="left-column">
 								<span>project name</span>
 							</th>
-							<th class="set-font-weight-to-regular td_vertical-align">due date</th>
-							<th class="set-font-weight-to-regular td_vertical-align">created</th>
-							<th class="set-font-weight-to-regular td_vertical-align">members</th>
-							<th class="set-font-weight-to-regular td_vertical-align">type</th>
-							<th class="set-font-weight-to-regular td_vertical-align">status</th>
-							<th class="set-font-weight-to-regular td_vertical-align">customer</th>
+							<th>due date</th>
+							<th>created</th>
+							<th>members</th>
+							<th>type</th>
+							<th>status</th>
+							<th>customer</th>
 							<th>
-								<button class="btn-plus">
-									<!--<img src="img/btn_plus.png" alt="add"/>-->
-								</button>
+								<button class="btn-plus"></button>
 							</th>
 						</tr>
 						<tr class="reset-background table-head-style">
@@ -140,10 +135,12 @@
 				 </tbody>
 				</table>
 			</div>
-			<aside class="left-right-nav-menu">
-				<form id="left-menu-form" action="#">
+			<aside class="asside-panels">
+				<form id="right-panel-form" action="#">
 					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name"/>
+					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
 					 <input id="datepicker-duedate" class="menu-input" type="text" placeholder="due date" name="right-menu-due-date"/>
+					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
 					 <input id="datepicker-created" class="menu-input" type="text" placeholder="created" name="right-menu-created"/>
 					 <select class="menu-input menu-select-styling" name="select-members" autocomplete="off">
 						<option disabled value="members" selected >members:</option>
