@@ -145,17 +145,16 @@ th.left-column{
 	height: 6em;
 }
 
-.checkbox-style{
+.checkbox-style_temp{
 	-moz-appearance: none;
 	-webkit-appearance: none;
-	
 	height:2em;
- width:2em;
- cursor:pointer;
- position:relative;
- -webkit-transition: .15s;
- border-radius:2em;
- background-color:#000;
+	width:2em;
+	cursor:pointer;
+	position:relative;
+	-webkit-transition: .15s;
+	border-radius:2em;
+	background-color:#000;
 }
 
 .block-input{
@@ -203,15 +202,6 @@ th.left-column{
 	color: #fff;
 }
 
-.table-head-style{
-	 
-      position: relative;
-}
-
-.table-body-style{
-	overflow: auto;
-	 
-}
 
 /* There are described styles which are related to "pikaday" and should be redifine. That is because we are not allowed to change author own styles:*/
 .pika-single{
