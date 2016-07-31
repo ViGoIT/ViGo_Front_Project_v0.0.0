@@ -181,21 +181,21 @@ th.left-column {
 
 .btn-recycle{
 	border: none;
-	background: none;
+	background: url(../img/recycle_new_s.png) no-repeat;
 	width: 35px;
 	height: 41px;
 }
 
 .btn-plus{
 	border: none;
-	background: none;
-	margin-left: 0.5rem;
+	background: url("../img/btn_plus.png") no-repeat;
+	width: 50px;
+	height: 47px;
 }
 
 .btn-create {
 	width: 84%;
 	background: #e67817;
-	/*text-align: left;*/
 }
 
 .menu-select-styling{
