@@ -8,7 +8,7 @@
 	src: url(../fonts/OpenSans-CondBold.ttf);
 	font-weight: bold;
 }
-
+/*----------------Selectors----by----TAG*/
 html,
 body{
     text-transform: uppercase;
@@ -18,12 +18,66 @@ body{
 
 }
 
+input[type=checkbox] {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+label span{
+	padding-left: 0.2em;
+}
+
+input[type="checkbox"] + label:before {
+	background: #2d1e10;
+	content: "\00a0";
+	display: inline-block;
+	font: 16px/1em sans-serif;
+	height: 30px;
+	margin: 0 .25em 0 0;
+	padding:0;
+	vertical-align: top;
+	width: 30px;
+}
+
+input[type="checkbox"]:checked + label:before {
+	color: #666;
+	content: url(../img/check-box-point.png);
+	text-align: center;
+}
+
+input[type="checkbox"]:checked + label:after {
+	font-weight: bold;
+}
+
 footer p{
     font-size: 1.313rem;
     text-align: center;
     padding-top: 1em;	
 }
 
+thead tr{
+	display: block;
+	position: relative;
+}
+
+th, td{
+	width: 14%;
+}
+/*----------------Selectors----by----TAG----and----class*/
+td,
+th,
+.td-vertical-align{
+	vertical-align: middle;
+}
+
+th,
+.set-font-weight-to-regular{
+	font-weight: normal;
+}
+/*----------------Selectors----by----class*/
 .tr-hover:nth-child(even){
     background: #0f1012;	
 }
@@ -61,28 +115,12 @@ footer p{
 	z-index: 1;
 }
 
-#tableData{
-	width: 90%;
-}
-
-#tableData.change-width{
-	width: 70%;
-	margin-left: 0;
-	margin-right: 10%;
-}
-
-td,
-th,
-.td-vertical-align{
-	vertical-align: middle;
-}
-
 .table-hr-line{
 	background: #737374;
 	border: none;
 	height: 1.5px;
 	margin-top: -0.5rem;
-	
+
 }
 
 tr.reset-background{
@@ -91,37 +129,32 @@ tr.reset-background{
 }
 
 
-.footer{
-    background: #e67817;
-    color: #fff;
-    width: 100%;
-    height: 65px;
+.footer-style{
+	background: #e67817;
+	color: #fff;
+	width: 100%;
+	height: 65px;
 }
 
 .content,
-.footer{
-    display: table-row;
-}
-
-th,
-.set-font-weight-to-regular{
-    font-weight: normal;
+.footer-style{
+	display: table-row;
 }
 
 th.left-column{
-    font-weight: bold;
+	font-weight: bold;
 	background-image: url(../img/th-proj-line.png);
 	background-position: right;
 	background-repeat: no-repeat;
 }
 
 .left-column{
-    font-weight: bold;
+	font-weight: bold;
 	background-image: url(../img/proj-line.png);
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 15px;
-	width: 14%;
+	/*width: 14%;*/
 }
 
 .aside-panels{
@@ -133,29 +166,8 @@ th.left-column{
 	background: #000;
 }
 
-#asideLeftPanel{
-	display: none;
-}
-
-#asideLeftPanel.display-block{
-	display: block;
-}
-
-#asideRightPanel{
-	position: absolute;
-	z-index: 2;
-	top:0;
-	right: 0;
-	visibility: hidden;
-	transition: all 2s cubic-bezier(0.25, 1.5, 0.75, 1.5) 0s;
-}
-
-#asideRightPanel.visibility-visible{
-	visibility: visible;
-	transform: rotate(360deg);
-}
 .th-cells-color{
-    color: #e67817;
+	color: #e67817;
 }
 
 .menu-input{
@@ -163,16 +175,16 @@ th.left-column{
 	margin-left: auto;
 	margin-right: auto;
 	font: 1rem/1.5 OpenSans, Verdana, Arial, Tahoma, sans-serif;
-	width: 80%;	
+	width: 80%;
 	padding-bottom: 1.125em;
 	padding-top: 1.125em;
 	padding-left: 0.75em;
 	margin-bottom: 1.875em;
 	color: #fff;
 	background: #221203;
-	border: none;	
+	border: none;
 	border-bottom: 1px solid #e67817;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 
 .left-panel-top-form{
@@ -211,7 +223,7 @@ th.left-column{
 }
 
 .tr-hover:hover td{
-    background-color: #353e44;
+	background-color: #353e44;
 }
 
 .btn-left-panel{
@@ -221,7 +233,7 @@ th.left-column{
 	border:none;
 	position: fixed;
 	top: 0;
-	left: 0;	
+	left: 0;
 }
 
 .btn-recycle{
@@ -243,20 +255,6 @@ th.left-column{
 	background: #e67817;
 }
 
-thead tr{
-	display: block;
-	position: relative;
-}
-
-
-th, td{
-	width: 14%;
-}
-
-td{
-	width: 14%;
-}
-
 .table-body-style{
 	display: block;
 	height: 800px;
@@ -264,48 +262,38 @@ td{
 	width: 100.3%;
 }
 
-th:nth-child(2){
-	padding-left: 10px;
+/*----------------Selectors----by----ID*/
+
+#tableData{
+	width: 90%;
 }
 
-td:nth-child(2){
-	padding-left: 10px;
+#tableData.change-width{
+	width: 70%;
+	margin-left: 0;
+	margin-right: 10%;
 }
 
-td:nth-child(8){
-	width: 7.5%;
-}
-
-input[type=checkbox] {
+#asideLeftPanel{
 	display: none;
 }
 
-label {
-	cursor: pointer;
+#asideLeftPanel.display-block{
+	display: block;
 }
 
-label span{
-	padding-left: 0.6em;
+#asideRightPanel{
+	position: absolute;
+	z-index: 2;
+	top:0;
+	right: 0;
+	visibility: hidden;
+	transition: all 2s cubic-bezier(0.25, 1.5, 0.75, 1.5) 0s;
 }
 
-input[type="checkbox"] + label:before {
-	background: #2d1e10;
-	content: "\00a0";
-	display: inline-block;
-	font: 16px/1em sans-serif;
-	height: 30px;
-	margin: 0 .25em 0 0;
-	padding:0;
-	vertical-align: top;
-	width: 30px;
-}
-input[type="checkbox"]:checked + label:before {
-	color: #666;
-	content: url(../img/check-box-point.png);
-	text-align: top;
-}
-input[type="checkbox"]:checked + label:after {
-	font-weight: bold;
+#asideRightPanel.visibility-visible{
+	visibility: visible;
+	transform: rotate(360deg);
 }
 
 /* There are described styles which are related to "pikaday" and should be redifine. That is because we are not allowed to change author own styles:*/
@@ -315,9 +303,9 @@ input[type="checkbox"]:checked + label:after {
 }
 
 .pika-lendar{
-    float: left;
-    width: 237px;
-    margin: 8px;
+	float: left;
+	width: 237px;
+	margin: 8px;
 }
 
 .pika-button{
@@ -331,3 +319,18 @@ input[type="checkbox"]:checked + label:after {
 .pika-label{
 	background-color: #221203;
 }
+
+/*Commented Selectors*/
+
+
+/*th:nth-child(2){*/
+	/*padding-left: 10px;*/
+/*}*/
+
+/*td:nth-child(2){*/
+	/*padding-left: 10px;*/
+/*}*/
+
+/*td:nth-child(8){*/
+	/*width: 7.5%;*/
+/*}*/
