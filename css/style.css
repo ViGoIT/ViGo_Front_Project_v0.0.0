@@ -1,7 +1,21 @@
+@font-face {
+	font-family: OpenSans;
+	src: url(../fonts/OpenSans-CondLight.ttf);
+}
+
+@font-face {
+	font-family: OpenSans;
+	src: url(../fonts/OpenSans-CondBold.ttf);
+	font-weight: bold;
+}
+
 html,
 body{
     text-transform: uppercase;
-    height: 100%;
+    font-family: OpenSans, Verdana, Arial, Tahoma, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+
 }
 
 footer p{
@@ -23,34 +37,38 @@ footer p{
     display: table;
     width: 100%;
 	color: #fff;
-	min-width: 1300px;
+	min-width: 1200px;
 	max-width: 1800px;
 	height: 100%;
+	position: relative;
 }
 
-.table-content{
-	width: 60%;
-	min-width: 800px;
-	max-width: 1800px;
-	background: #0a0b0d;
-	/*display: inline-block;*/
-	float: left;	
-	margin-top: 0em;
-}
-
-.tdata{
-    font: 1.125rem/1.5 Calibri, Verdana, Arial, Tahoma, sans-serif;    
+.table-data{
+    font: 1.125rem/1.5 OpenSans, Verdana, Arial, Tahoma, sans-serif;
 	background: none;
-    width: 96%;
-	min-width: 768px;
-	max-width: 1728px;
+	/*min-width: 768px;*/
+	/*max-width: 1728px;*/
+	min-width: 700px;
+	max-width: 1800px;
     float: left;    
     text-align: center;	
     margin-top: 1em;
-	margin-left: 18px;
+	margin-left: 5%;
+	margin-right: 5%;
+	table-layout: fixed;
 	border-collapse: separate;
-	border-spacing: 0px 10px;
-	
+	border-spacing: 0px 8px;
+	z-index: 1;
+}
+
+#tableData{
+	width: 90%;
+}
+
+#tableData.change-width{
+	width: 70%;
+	margin-left: 0;
+	margin-right: 10%;
 }
 
 td,
@@ -68,7 +86,8 @@ th,
 }
 
 tr.reset-background{
-	background: #0a0b0d;
+	background: #737374;
+	height: 1.5px;
 }
 
 
@@ -101,30 +120,49 @@ th.left-column{
 	background-image: url(../img/proj-line.png);
 	background-position: right;
 	background-repeat: no-repeat;
+	padding-right: 15px;
+	width: 14%;
 }
 
-.asside-panels{
-    float: left;
-    width: 19%;
+.aside-panels{
+	min-height: 93%;
+	width: 19%;
 	min-width: 240px;
 	max-width: 300px;
-	margin-top: 5rem;
-	
+	float: left;
+	background: #000;
 }
 
+#asideLeftPanel{
+	display: none;
+}
+
+#asideLeftPanel.display-block{
+	display: block;
+}
+
+#asideRightPanel{
+	position: absolute;
+	z-index: 2;
+	top:0;
+	right: 0;
+	visibility: hidden;
+	transition: all 2s cubic-bezier(0.25, 1.5, 0.75, 1.5) 0s;
+}
+
+#asideRightPanel.visibility-visible{
+	visibility: visible;
+	transform: rotate(360deg);
+}
 .th-cells-color{
     color: #e67817;
-}
-
-.envelope-for-menu-input1{
-	margin-top: 5rem;
 }
 
 .menu-input{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	font: 1rem/1.5 Calibri, Verdana, Arial, Tahoma, sans-serif;
+	font: 1rem/1.5 OpenSans, Verdana, Arial, Tahoma, sans-serif;
 	width: 80%;	
 	padding-bottom: 1.125em;
 	padding-top: 1.125em;
@@ -135,6 +173,14 @@ th.left-column{
 	border: none;	
 	border-bottom: 1px solid #e67817;
 	text-transform: uppercase;	
+}
+
+.left-panel-top-form{
+	padding-top: 70%;
+}
+
+.right-panel-form{
+	padding-top: 50%;
 }
 
 .checkbox-field{
@@ -157,7 +203,7 @@ th.left-column{
 	background-color:#000;
 }
 
-.block-input{
+.checkbox-left-panel{
 	margin-top: 0.7em;
 	margin-bottom: 0.7em;
 	width: 48%;
@@ -168,15 +214,14 @@ th.left-column{
     background-color: #353e44;
 }
 
-.btn-right-panel{
+.btn-left-panel{
 	width: 32px;
 	height: 22px;
 	background: url(../img/nav_button_org.png) no-repeat;
 	border:none;
 	position: fixed;
 	top: 0;
-	left: 0;
-	margin-left: -8px;
+	left: 0;	
 }
 
 .btn-recycle{
@@ -198,10 +243,70 @@ th.left-column{
 	background: #e67817;
 }
 
-.menu-select-styling{
-	color: #fff;
+thead tr{
+	display: block;
+	position: relative;
 }
 
+
+th, td{
+	width: 14%;
+}
+
+td{
+	width: 14%;
+}
+
+.table-body-style{
+	display: block;
+	height: 800px;
+	overflow-y: scroll;
+	width: 100.3%;
+}
+
+th:nth-child(2){
+	padding-left: 10px;
+}
+
+td:nth-child(2){
+	padding-left: 10px;
+}
+
+td:nth-child(8){
+	width: 7.5%;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+label span{
+	padding-left: 0.6em;
+}
+
+input[type="checkbox"] + label:before {
+	background: #2d1e10;
+	content: "\00a0";
+	display: inline-block;
+	font: 16px/1em sans-serif;
+	height: 30px;
+	margin: 0 .25em 0 0;
+	padding:0;
+	vertical-align: top;
+	width: 30px;
+}
+input[type="checkbox"]:checked + label:before {
+	color: #666;
+	content: url(../img/check-box-point.png);
+	text-align: top;
+}
+input[type="checkbox"]:checked + label:after {
+	font-weight: bold;
+}
 
 /* There are described styles which are related to "pikaday" and should be redifine. That is because we are not allowed to change author own styles:*/
 .pika-single{

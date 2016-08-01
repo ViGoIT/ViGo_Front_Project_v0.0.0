@@ -10,34 +10,35 @@
 	<body>
 	<!--section should include <h1-h6>, that is why I have changed it to <div>-->
 	 <div class="envelope">
-					<aside class="asside-panels">
-						<button class="btn-right-panel">
-							<!--<img src="img/nav_button_org.png" alt="Filter Button"/>-->
-						</button>
-						<form novalidate action="#">
+		 			<button id="btnLeftPanel" class="btn-left-panel"></button>
+					<aside id="asideLeftPanel" class="aside-panels aside-left-panel">
+						<form class="left-panel-top-form" novalidate action="#">
 							<input class="menu-input" placeholder="search:" type="search" id="search" name="search"/>
 						</form>
 						<form action="#" method="post">
 							<fieldset class="checkbox-field menu-input">
-								<div class="block-input">
-									<label><input class="checkbox-style" type="checkbox" name="type-of-project" value="web"/>web</label>
+								<div class="checkbox-left-panel">
+									<input id="web-cbox" class="checkbox-style" type="checkbox" name="web-project" value="web"/>
+									<label for="web-cbox"><span>web</span></label>
 								</div>
-								<div class="block-input">
-									<label><input type="checkbox" name="type-of-project" value="desktop"/>desktop</label>
+								<div class="checkbox-left-panel">
+									<input id="desktop-cbox" type="checkbox" name="desktop-project" value="desktop"/>
+									<label for="desktop-cbox"><span>desktop</span></label>
 								</div>
-								<div class="block-input">
-									<label><input type="checkbox" name="type-of-project" value="mobile"/>mobile</label>
+								<div class="checkbox-left-panel">
+									<input id="mobile-cbox" type="checkbox" name="mobile-project" value="mobile"/>
+									<label for="mobile-cbox"><span>mobile</span></label>
 								</div>
-								<div class="block-input">
-									<label><input type="checkbox" name="type-of-project" value="support"/>support</label>
+								<div class="checkbox-left-panel">
+									<input id="support-cbox" type="checkbox" name="support-project" value="support"/>
+									<label for="support-cbox"><span>support</span></label>
 								</div>
 							</fieldset>
 							<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
 							<input id="datepicker-left-menu" class="menu-input" type="text" placeholder="12-04-1986" name="left-menu-project-date"/>
 						</form>
 					</aside>
-			<div class="table-content">
-				<table class="tdata">
+					<table id="tableData" class="table-data">
 					<thead class="th-cells-color">
 						<tr class="table-head-style">
 							<th class="left-column">
@@ -50,16 +51,168 @@
 							<th>status</th>
 							<th>customer</th>
 							<th>
-								<button class="btn-plus"></button>
+								<button id="btnplus" class="btn-plus"></button>
 							</th>
 						</tr>
-						<tr class="reset-background table-head-style">
-							<th colspan="8">
-								<hr class="table-hr-line">
-							</th>
-						</tr>
+						<tr class="reset-background table-head-style"></tr>
 					</thead>
-				<tbody class="table-body-style">
+				<tbody id="tablebody" class="table-body-style">
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
+					<tr class="tr-hover">
+						<td class="left-column">project name</td>
+						<td>due date</td>
+						<td>created</td>
+						<td>members</td>
+						<td>type</td>
+						<td>status</td>
+						<td>customer</td>
+						<td>
+							<button class="btn-recycle"></button>
+						</td>
+					</tr>
 					<tr class="tr-hover">
 						<td class="left-column">project name</td>
 						<td>due date</td>
@@ -134,9 +287,8 @@
 					</tr>
 				 </tbody>
 				</table>
-			</div>
-			<aside class="asside-panels">
-				<form id="right-panel-form" action="#">
+		 	<aside id="asideRightPanel" class="aside-panels aside-right-panel">
+				<form class="right-panel-form" action="#">
 					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name"/>
 					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
 					 <input id="datepicker-duedate" class="menu-input" type="text" placeholder="due date" name="right-menu-due-date"/>
@@ -162,17 +314,35 @@
 						<option value="electrolux">electrolux</option>
 						<option value="ikea">ikea</option>
 					 </select>
-					 
 					 <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
-					 
 				</form>
 			</aside>
-		
-		
-		<footer class="footer">
-			<p>infopulse courses dashboard &#64; 2016</p>
-		</footer>
+			 <footer class="footer">
+				<p>infopulse courses dashboard &#64; 2016</p>
+			</footer>
 	 </div>
+		<script>
+			btnplus.onclick = function(){
+				asideRightPanel.classList.add('visibility-visible');
+			}
+
+			btnLeftPanel.onclick = function (){
+				var elem = document.getElementById('asideLeftPanel');
+				displayProp = window.getComputedStyle(elem,null).getPropertyValue('display');
+				//alert(displayProp);
+				if(displayProp!='none'){
+					asideLeftPanel.classList.remove('display-block');
+					tableData.classList.remove('change-width');
+				} else {
+					asideLeftPanel.classList.add('display-block');
+					tableData.classList.add('change-width');
+				}
+			}
+
+			tablebody.onclick = function (){
+				asideRightPanel.classList.remove('visibility-visible');
+			}
+		</script>
 		<script src="scripts/pikaday.js"></script>
 		<script>
 			var pickerDueDate = new Pikaday({ field: document.getElementById('datepicker-duedate') });
