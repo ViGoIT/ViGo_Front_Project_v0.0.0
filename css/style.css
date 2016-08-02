@@ -296,41 +296,4 @@ th.left-column{
 	transform: rotate(360deg);
 }
 
-/* There are described styles which are related to "pikaday" and should be redifine. That is because we are not allowed to change author own styles:*/
-.pika-single{
-	background: #221203;
-	border: none;
-}
-
-.pika-lendar{
-	float: left;
-	width: 237px;
-	margin: 8px;
-}
-
-.pika-button{
-	background: #2c2c2c;
-}
-
-.pika-button:hover{
-	background: #e67817;
-}
-
-.pika-label{
-	background-color: #221203;
-}
-
-/*Commented Selectors*/
-
-
-/*th:nth-child(2){*/
-	/*padding-left: 10px;*/
-/*}*/
-
-/*td:nth-child(2){*/
-	/*padding-left: 10px;*/
-/*}*/
-
-/*td:nth-child(8){*/
-	/*width: 7.5%;*/
-/*}*/
+/* There are described styles which are related to "kalendae" and should be redifine. That is because we are not allowed to change author own styles:*/

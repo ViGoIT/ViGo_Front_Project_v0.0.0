@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<title>"Hello World" Team Projects</title>
 		<link rel="Stylesheet" href="css/reset.css" type="text/css"/>
-		<link rel="Stylesheet" href="css/pikaday.css" type="text/css"/>
+		<link rel="stylesheet" href="kalendae/kalendae.css" type="text/css" charset="utf-8">
 		<link rel="Stylesheet" href="css/style.css" type="text/css"/>
 	</head>
 	<body>
@@ -35,7 +35,7 @@
 								</div>
 							</fieldset>
 							<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-							<input id="datepicker-left-menu" class="menu-input" type="text" placeholder="12-04-1986" name="left-menu-project-date" maxlength="15"/>
+							<input id="leftPanelDate" class="menu-input auto-kal" type="text" name="left-menu-project-date" maxlength="15"/>
 						</form>
 					</aside>
 					<table id="tableData" class="table-data">
@@ -291,9 +291,9 @@
 				<form class="right-panel-form" action="#">
 					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name" maxlength="22" pattern="(?!.*\d.*)(?!.*\s.*).*"/><!--(no digits)(no space)all characters zero or more-->
 					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					 <input id="datepicker-duedate" class="menu-input" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
+					 <input class="menu-input auto-kal" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
 					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					 <input id="datepicker-created" class="menu-input" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
+					 <input class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
 					 <select class="menu-input menu-select-styling" name="select-members" autocomplete="off">
 						<option disabled value="members" selected >members:</option>
 						<option value="petro">petro</option>
@@ -322,6 +322,37 @@
 			</footer>
 	 </div>
 		<script>
+			var myVar = setTimeout(function() {myTimer();}, 1000);
+			function myTimer()
+			{
+				"use strict";
+				var time = new Date();
+				var day = time.getDate();
+				var month = time.getMonth() + 1;
+				var year = time.getFullYear();
+				var dateandtime = document.getElementById("leftPanelDate");
+				var hours = time.getHours();
+				var minutes = time.getMinutes();
+				var seconds = time.getSeconds();
+				if (day < 10)
+				{
+					day = "0" + day;
+				}
+				if (month < 10)
+				{
+					month = "0" + month;
+				}
+				if(seconds<10)
+				{
+					dateandtime.placeholder = "date: " + day + "/" + month + "/" + year + " time: " + hours + ":" + minutes + ":" +"0" + seconds;
+				}
+				else
+				{
+					dateandtime.placeholder = "date: " + day + "/" + month + "/" + year + " time: " + hours + ":" + minutes + ":" + seconds;
+				}
+			}
+		</script>
+		<script>
 			btnplus.onclick = function(){
 				asideRightPanel.classList.add('visibility-visible');
 			}
@@ -343,12 +374,7 @@
 				asideRightPanel.classList.remove('visibility-visible');
 			}
 		</script>
-		<script src="scripts/pikaday.js"></script>
-		<script>
-			var pickerDueDate = new Pikaday({ field: document.getElementById('datepicker-duedate') });
-			var pickerCreateDate = new Pikaday({ field: document.getElementById('datepicker-created') });
-			var pickerLeftMenu = new Pikaday({ field: document.getElementById('datepicker-left-menu') });
-		</script>
+		<script src="kalendae/kalendae.standalone.js" charset="utf-8"></script>
 	</body>
 	
 </html>
