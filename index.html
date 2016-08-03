@@ -303,26 +303,32 @@
 						 <button class="btn-date"></button>
 						 <input class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
 					</div>
-					 <select class="menu-input menu-select-styling" name="select-members" autocomplete="off">
-						<option disabled value="members" selected >members:</option>
-						<option value="petro">petro</option>
-						<option value="vasyl">vasyl</option>
-						<option value="ivan">ivan</option>
-					 </select>
-					 <select class="menu-input menu-select-styling" name="select-type" autocomplete="off">
-						<option disabled value="type" selected >type:</option>
-						<option value="web">web</option>
-						<option value="desktop">desktop</option>
-						<option value="mobile">mobile</option>
-						<option value="support">support</option>
-					 </select>
-					<select class="menu-input menu-select-styling" name="select-customer" autocomplete="off">
-						<option disabled value="customer" selected >customer:</option>
-						<option value="evry">evry</option>
-						<option value="volvo">volvo</option>
-						<option value="electrolux">electrolux</option>
-						<option value="ikea">ikea</option>
-					 </select>
+					<div class="members-field">
+						<button class="btn-expand"></button>
+						<input class="menu-input" type="text" placeholder="members:" name="right-menu-members" readonly>
+					</div>
+					<div class="members-field">
+						<button class="btn-expand"></button>
+						<input class="menu-input" type="text" placeholder="type:" name="right-menu-select-type" readonly>
+					</div>
+					<div class="members-field">
+						<button class="btn-expand"></button>
+						<input class="menu-input" type="text" placeholder="customer:" name="right-menu-select-customer" readonly>
+					</div>
+					 <!--<select class="menu-input menu-select-styling" name="select-type" autocomplete="off">-->
+						<!--<option disabled value="type" selected >type:</option>-->
+						<!--<option value="web">web</option>-->
+						<!--<option value="desktop">desktop</option>-->
+						<!--<option value="mobile">mobile</option>-->
+						<!--<option value="support">support</option>-->
+					 <!--</select>-->
+					<!--<select class="menu-input menu-select-styling" name="select-customer" autocomplete="off">-->
+						<!--<option disabled value="customer" selected >customer:</option>-->
+						<!--<option value="evry">evry</option>-->
+						<!--<option value="volvo">volvo</option>-->
+						<!--<option value="electrolux">electrolux</option>-->
+						<!--<option value="ikea">ikea</option>-->
+					 <!--</select>-->
 					 <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
 				</form>
 			</aside>
