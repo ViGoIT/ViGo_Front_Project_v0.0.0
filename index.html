@@ -13,7 +13,10 @@
 		 			<button id="btnLeftPanel" class="btn-left-panel"></button>
 					<aside id="asideLeftPanel" class="aside-panels aside-left-panel">
 						<form class="left-panel-top-form" novalidate action="#">
-							<input class="menu-input" placeholder="search:" type="search" id="search" name="search" pattern="[.{3,}]"/>
+							<div class="search-field">
+								<button class="btn-search"></button>
+								<input class="menu-input" placeholder="search:" type="search" id="search" name="search" pattern="[.{3,}]" />
+							</div>
 						</form>
 						<form action="#" method="post">
 							<fieldset class="checkbox-field menu-input">
@@ -291,9 +294,15 @@
 				<form class="right-panel-form" action="#">
 					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name" maxlength="22" pattern="(?!.*\d.*)(?!.*\s.*).*"/><!--(no digits)(no space)all characters zero or more-->
 					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					 <input class="menu-input auto-kal" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
+					<div class="search-field">
+							<button class="btn-date"></button>
+						 	<input class="menu-input auto-kal" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
+					</div>
 					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					 <input class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
+					<div class="search-field">
+						 <button class="btn-date"></button>
+						 <input class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
+					</div>
 					 <select class="menu-input menu-select-styling" name="select-members" autocomplete="off">
 						<option disabled value="members" selected >members:</option>
 						<option value="petro">petro</option>
