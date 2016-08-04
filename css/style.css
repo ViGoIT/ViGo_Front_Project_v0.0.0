@@ -188,7 +188,42 @@ th.left-column{
 
 }
 
-.search-field{
+.part-of-select{
+	margin-bottom: 0;
+	text-align: center;
+	border-bottom: none;
+	width: 80%;
+	padding-top: 0.5em;
+	padding-bottom: 0;
+}
+
+.pseudo-select-members{
+	margin-top: -2em;
+	margin-left: 0.5px;
+	display: none;
+}
+
+.pseudo-select-type{
+	margin-top: -2em;
+	margin-left: 0.5px;
+	display: none;
+}
+
+.pseudo-select-customer{
+	margin-top: -2em;
+	margin-left: 0.5px;
+	display: none;
+}
+
+.first-child{
+	border-top: 2px solid #fff;
+}
+
+.last-child{
+	border-bottom: 1px solid #e67817;
+}
+
+.position-relative{
 	position: relative;
 }
 
@@ -231,7 +266,7 @@ th.left-column{
 	background-color: #353e44;
 }
 
-.members-field{
+.pseudo-select-field{
 	position: relative;
 }
 

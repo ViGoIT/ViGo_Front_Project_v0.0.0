@@ -13,7 +13,7 @@
 		 			<button id="btnLeftPanel" class="btn-left-panel"></button>
 					<aside id="asideLeftPanel" class="aside-panels aside-left-panel">
 						<form class="left-panel-top-form" novalidate action="#">
-							<div class="search-field">
+							<div class="position-relative">
 								<button class="btn-search"></button>
 								<input class="menu-input" placeholder="search:" type="search" id="search" name="search" pattern="[.{3,}]" />
 							</div>
@@ -37,8 +37,11 @@
 									<label for="support-cbox"><span>support</span></label>
 								</div>
 							</fieldset>
-							<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-							<input id="leftPanelDate" class="menu-input auto-kal" type="text" name="left-menu-project-date" maxlength="15"/>
+							<div class="position-relative">
+								<button class="btn-date"></button>
+								<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
+								<input id="leftPanelDate" class="menu-input auto-kal" type="text" name="left-menu-project-date" maxlength="15"/>
+							</div>
 						</form>
 					</aside>
 					<table id="tableData" class="table-data">
@@ -294,28 +297,46 @@
 				<form class="right-panel-form" action="#">
 					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name" maxlength="22" pattern="(?!.*\d.*)(?!.*\s.*).*"/><!--(no digits)(no space)all characters zero or more-->
 					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					<div class="search-field">
+					<div class="position-relative">
 							<button class="btn-date"></button>
 						 	<input class="menu-input auto-kal" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
 					</div>
 					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					<div class="search-field">
+					<div class="position-relative">
 						 <button class="btn-date"></button>
 						 <input class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
 					</div>
-					<div class="members-field">
+					<div class="pseudo-select-field">
 						<button class="btn-expand"></button>
 						<input class="menu-input" type="text" placeholder="members:" name="right-menu-members" readonly>
+						<div class="pseudo-select-members">
+							<div class="menu-input part-of-select first-child"><p>Arnold</p></div>
+							<div class="menu-input part-of-select"><p>Sylvester</p></div>
+							<div class="menu-input part-of-select"><p>Jean-Claude</p></div>
+							<div class="menu-input part-of-select last-child"><p>Dolph</p></div>
+						</div>
 					</div>
-					<div class="members-field">
+					<div class="pseudo-select-field">
 						<button class="btn-expand"></button>
 						<input class="menu-input" type="text" placeholder="type:" name="right-menu-select-type" readonly>
+						<div class="pseudo-select-type">
+							<div class="menu-input part-of-select first-child"><p>web</p></div>
+							<div class="menu-input part-of-select"><p>desktop</p></div>
+							<div class="menu-input part-of-select"><p>mobile</p></div>
+							<div class="menu-input part-of-select last-child"><p>support</p></div>
+						</div>
 					</div>
-					<div class="members-field">
+					<div class="pseudo-select-field">
 						<button class="btn-expand"></button>
 						<input class="menu-input" type="text" placeholder="customer:" name="right-menu-select-customer" readonly>
+						<div class="pseudo-select-customer">
+							<div class="menu-input part-of-select first-child"><p>evry</p></div>
+							<div class="menu-input part-of-select"><p>volvo</p></div>
+							<div class="menu-input part-of-select"><p>electrolux</p></div>
+							<div class="menu-input part-of-select last-child"><p>ikea</p></div>
+						</div>
 					</div>
-					 <!--<select class="menu-input menu-select-styling" name="select-type" autocomplete="off">-->
+					 <!--<select name="select-type" autocomplete="off">-->
 						<!--<option disabled value="type" selected >type:</option>-->
 						<!--<option value="web">web</option>-->
 						<!--<option value="desktop">desktop</option>-->
@@ -337,7 +358,7 @@
 			</footer>
 	 </div>
 		<script>
-			var myVar = setTimeout(function() {myTimer();}, 1000);
+			var myVar = setInterval(function() {myTimer();}, 1000);
 			function myTimer()
 			{
 				"use strict";
@@ -346,9 +367,6 @@
 				var month = time.getMonth() + 1;
 				var year = time.getFullYear();
 				var dateandtime = document.getElementById("leftPanelDate");
-				var hours = time.getHours();
-				var minutes = time.getMinutes();
-				var seconds = time.getSeconds();
 				if (day < 10)
 				{
 					day = "0" + day;
@@ -357,14 +375,7 @@
 				{
 					month = "0" + month;
 				}
-				if(seconds<10)
-				{
-					dateandtime.placeholder = "date: " + day + "/" + month + "/" + year + " time: " + hours + ":" + minutes + ":" +"0" + seconds;
-				}
-				else
-				{
-					dateandtime.placeholder = "date: " + day + "/" + month + "/" + year + " time: " + hours + ":" + minutes + ":" + seconds;
-				}
+				dateandtime.placeholder = day + "-" + month + "-" + year;
 			}
 		</script>
 		<script>
