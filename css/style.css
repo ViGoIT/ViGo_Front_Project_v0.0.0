@@ -9,12 +9,17 @@
 	font-weight: bold;
 }
 /*----------------Selectors----by----TAG*/
-html,
+html{
+	height: 100%;
+}
+
 body{
     text-transform: uppercase;
     font-family: OpenSans, Verdana, Arial, Tahoma, sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
+	min-height: 100%;
+	position: relative;
 
 }
 
@@ -58,6 +63,24 @@ footer p{
     padding-top: 1em;	
 }
 
+thead th{
+	cursor: pointer;
+}
+
+table th.asc:after {
+	display: block;
+	border-style: solid;
+	border-width: 0 5px 10px 5px;
+	border-color: transparent transparent #e2e2e2 transparent;
+}
+
+table th.desc:after {
+	display: block;
+	border-style: solid;
+	border-width: 10px 5px 0 5px;
+	border-color: #e2e2e2 transparent transparent transparent;
+}
+
 thead tr{
 	display: block;
 	position: relative;
@@ -92,7 +115,7 @@ th,
     width: 100%;
 	color: #fff;
 	min-width: 1200px;
-	max-width: 1800px;
+	max-width: 2400px;
 	height: 100%;
 	position: relative;
 }
@@ -112,7 +135,8 @@ th,
 	table-layout: fixed;
 	border-collapse: separate;
 	border-spacing: 0px 8px;
-	z-index: 1;
+	/*margin: 0 auto;*/
+	/*z-index: 1;*/
 }
 
 .table-hr-line{
@@ -138,7 +162,11 @@ tr.reset-background{
 
 .content,
 .footer-style{
-	display: table-row;
+	/*display: table-row;*/
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 th.left-column{
@@ -228,7 +256,7 @@ th.left-column{
 }
 
 .left-panel-top-form{
-	padding-top: 70%;
+	padding-top: 50%;
 }
 
 .right-panel-form{
@@ -271,8 +299,8 @@ th.left-column{
 }
 
 .btn-left-panel{
-	width: 32px;
-	height: 22px;
+	width: 37px;
+	height: 30px;
 	background: url(../img/nav_button_org.png) no-repeat;
 	border:none;
 	position: fixed;
@@ -338,27 +366,28 @@ th.left-column{
 
 /*----------------Selectors----by----ID*/
 
-#tableData{
-	width: 90%;
+#tableData.change-width{
+	width: 94%;
+	margin-left: 3%;
+	margin-right: 3%;
 }
 
-#tableData.change-width{
-	width: 70%;
+#tableData{
+	width: 75%;
 	margin-left: 0;
-	margin-right: 10%;
 }
 
 #asideLeftPanel{
-	display: none;
+	display: block;
 }
 
-#asideLeftPanel.display-block{
-	display: block;
+#asideLeftPanel.display-none{
+	display: none;
 }
 
 #asideRightPanel{
 	position: absolute;
-	z-index: 2;
+	/*z-index: 2;*/
 	top:0;
 	right: 0;
 	visibility: hidden;

@@ -9,9 +9,10 @@
 	</head>
 	<body>
 	<!--section should include <h1-h6>, that is why I have changed it to <div>-->
-	 <div class="envelope">
-		 			<button id="btnLeftPanel" class="btn-left-panel"></button>
+	 <div id="envelope" class="envelope">
+                    <button id="btnLeftPanel" class="btn-left-panel"></button>
 					<aside id="asideLeftPanel" class="aside-panels aside-left-panel">
+
 						<form class="left-panel-top-form" novalidate action="#">
 							<div class="position-relative">
 								<button class="btn-search"></button>
@@ -44,12 +45,10 @@
 							</div>
 						</form>
 					</aside>
-					<table id="tableData" class="table-data">
+            <table id="tableData" class="table-data">
 					<thead class="th-cells-color">
 						<tr class="table-head-style">
-							<th class="left-column">
-								<span>project name</span>
-							</th>
+							<th class="left-column">project name</th>
 							<th>due date</th>
 							<th>created</th>
 							<th>members</th>
@@ -57,241 +56,14 @@
 							<th>status</th>
 							<th>customer</th>
 							<th>
-								<button id="btnplus" class="btn-plus"></button>
+								<button id="btnPlus" class="btn-plus"></button>
 							</th>
 						</tr>
 						<tr class="reset-background table-head-style"></tr>
 					</thead>
-				<tbody id="tablebody" class="table-body-style">
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-					<tr class="tr-hover">
-						<td class="left-column">project name</td>
-						<td>due date</td>
-						<td>created</td>
-						<td>members</td>
-						<td>type</td>
-						<td>status</td>
-						<td>customer</td>
-						<td>
-							<button class="btn-recycle"></button>
-						</td>
-					</tr>
-				 </tbody>
+				<tbody id="tableBody" class="table-body-style">
+                    <!--function pasteContentToDOM-->
+				</tbody>
 				</table>
 		 	<aside id="asideRightPanel" class="aside-panels aside-right-panel">
 				<form class="right-panel-form" action="#">
@@ -336,20 +108,6 @@
 							<div class="menu-input part-of-select last-child"><p>ikea</p></div>
 						</div>
 					</div>
-					 <!--<select name="select-type" autocomplete="off">-->
-						<!--<option disabled value="type" selected >type:</option>-->
-						<!--<option value="web">web</option>-->
-						<!--<option value="desktop">desktop</option>-->
-						<!--<option value="mobile">mobile</option>-->
-						<!--<option value="support">support</option>-->
-					 <!--</select>-->
-					<!--<select class="menu-input menu-select-styling" name="select-customer" autocomplete="off">-->
-						<!--<option disabled value="customer" selected >customer:</option>-->
-						<!--<option value="evry">evry</option>-->
-						<!--<option value="volvo">volvo</option>-->
-						<!--<option value="electrolux">electrolux</option>-->
-						<!--<option value="ikea">ikea</option>-->
-					 <!--</select>-->
 					 <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
 				</form>
 			</aside>
@@ -357,49 +115,7 @@
 				<p>infopulse courses dashboard &#64; 2016</p>
 			</footer>
 	 </div>
-		<script>
-			var myVar = setInterval(function() {myTimer();}, 1000);
-			function myTimer()
-			{
-				"use strict";
-				var time = new Date();
-				var day = time.getDate();
-				var month = time.getMonth() + 1;
-				var year = time.getFullYear();
-				var dateandtime = document.getElementById("leftPanelDate");
-				if (day < 10)
-				{
-					day = "0" + day;
-				}
-				if (month < 10)
-				{
-					month = "0" + month;
-				}
-				dateandtime.placeholder = day + "-" + month + "-" + year;
-			}
-		</script>
-		<script>
-			btnplus.onclick = function(){
-				asideRightPanel.classList.add('visibility-visible');
-			}
-
-			btnLeftPanel.onclick = function (){
-				var elem = document.getElementById('asideLeftPanel');
-				displayProp = window.getComputedStyle(elem,null).getPropertyValue('display');
-				//alert(displayProp);
-				if(displayProp!='none'){
-					asideLeftPanel.classList.remove('display-block');
-					tableData.classList.remove('change-width');
-				} else {
-					asideLeftPanel.classList.add('display-block');
-					tableData.classList.add('change-width');
-				}
-			}
-
-			tablebody.onclick = function (){
-				asideRightPanel.classList.remove('visibility-visible');
-			}
-		</script>
+        <script src="scripts/script.js" charset="utf-8"></script>
 		<script src="kalendae/kalendae.standalone.js" charset="utf-8"></script>
 	</body>
 	
