@@ -39,7 +39,7 @@
 								</div>
 							</fieldset>
 							<div class="position-relative">
-								<button class="btn-date"></button>
+								<label for="leftPanelDate"><img class="btn-date"/></label>
 								<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
 								<input id="leftPanelDate" class="menu-input auto-kal" type="text" name="left-menu-project-date" maxlength="15"/>
 							</div>
@@ -60,63 +60,64 @@
 							</th>
 						</tr>
 						<tr class="reset-background table-head-style"></tr>
+
 					</thead>
 				<tbody id="tableBody" class="table-body-style">
-                    <!--function pasteContentToDOM-->
+				    <!--function pasteContentToDOM-->
 				</tbody>
 				</table>
-		 	<aside id="asideRightPanel" class="aside-panels aside-right-panel">
-				<form class="right-panel-form" action="#">
-					 <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name" maxlength="22" pattern="(?!.*\d.*)(?!.*\s.*).*"/><!--(no digits)(no space)all characters zero or more-->
-					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					<div class="position-relative">
-							<button class="btn-date"></button>
-						 	<input class="menu-input auto-kal" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
-					</div>
-					<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-					<div class="position-relative">
-						 <button class="btn-date"></button>
-						 <input class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
-					</div>
-					<div class="pseudo-select-field">
-						<button class="btn-expand"></button>
-						<input class="menu-input" type="text" placeholder="members:" name="right-menu-members" readonly>
-						<div class="pseudo-select-members">
-							<div class="menu-input part-of-select first-child"><p>Arnold</p></div>
-							<div class="menu-input part-of-select"><p>Sylvester</p></div>
-							<div class="menu-input part-of-select"><p>Jean-Claude</p></div>
-							<div class="menu-input part-of-select last-child"><p>Dolph</p></div>
-						</div>
-					</div>
-					<div class="pseudo-select-field">
-						<button class="btn-expand"></button>
-						<input class="menu-input" type="text" placeholder="type:" name="right-menu-select-type" readonly>
-						<div class="pseudo-select-type">
-							<div class="menu-input part-of-select first-child"><p>web</p></div>
-							<div class="menu-input part-of-select"><p>desktop</p></div>
-							<div class="menu-input part-of-select"><p>mobile</p></div>
-							<div class="menu-input part-of-select last-child"><p>support</p></div>
-						</div>
-					</div>
-					<div class="pseudo-select-field">
-						<button class="btn-expand"></button>
-						<input class="menu-input" type="text" placeholder="customer:" name="right-menu-select-customer" readonly>
-						<div class="pseudo-select-customer">
-							<div class="menu-input part-of-select first-child"><p>evry</p></div>
-							<div class="menu-input part-of-select"><p>volvo</p></div>
-							<div class="menu-input part-of-select"><p>electrolux</p></div>
-							<div class="menu-input part-of-select last-child"><p>ikea</p></div>
-						</div>
-					</div>
-					 <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
-				</form>
-			</aside>
+                <aside id="asideRightPanel" class="aside-panels aside-right-panel">
+                    <form class="right-panel-form" action="#">
+                         <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name" maxlength="22" pattern="(?!.*\d.*)(?!.*\s.*).*"/><!--(no digits)(no space)all characters zero or more-->
+                        <!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
+                        <div class="position-relative">
+                                <label for="inputDueDate"><img class="btn-date"/></label>
+                                <input id="inputDueDate" class="menu-input auto-kal" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
+                        </div>
+                        <!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
+                        <div class="position-relative">
+                            <label for="inputCreatedDate"><img class="btn-date"/></label>
+                             <input id="inputCreatedDate" class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
+                        </div>
+                        <div class="pseudo-select-field">
+                            <button id="btnForMemebrs" class="btn-expand"></button>
+                            <input id="inputMembers" class="menu-input" type="text" placeholder="members:" name="right-menu-members" readonly>
+                            <div class="pseudo-select-members pseudo-select">
+                                <div class="menu-input part-of-select first-child"><p>Arnold</p></div>
+                                <div class="menu-input part-of-select"><p>Sylvester</p></div>
+                                <div class="menu-input part-of-select"><p>Jean-Claude</p></div>
+                                <div class="menu-input part-of-select last-child"><p>Dolph</p></div>
+                            </div>
+                        </div>
+                        <div class="pseudo-select-field">
+                            <button id="btnForType" class="btn-expand"></button>
+                            <input class="menu-input" type="text" placeholder="type:" name="right-menu-select-type" readonly>
+                            <div class="pseudo-select-type pseudo-select">
+                                <div class="menu-input part-of-select first-child"><p>web</p></div>
+                                <div class="menu-input part-of-select"><p>desktop</p></div>
+                                <div class="menu-input part-of-select"><p>mobile</p></div>
+                                <div class="menu-input part-of-select last-child"><p>support</p></div>
+                            </div>
+                        </div>
+                        <div class="pseudo-select-field">
+                            <button id="btnForCustomer" class="btn-expand"></button>
+                            <input class="menu-input" type="text" placeholder="customer:" name="right-menu-select-customer" readonly>
+                            <div class="pseudo-select-customer pseudo-select">
+                                <div class="menu-input part-of-select first-child"><p>evry</p></div>
+                                <div class="menu-input part-of-select"><p>volvo</p></div>
+                                <div class="menu-input part-of-select"><p>electrolux</p></div>
+                                <div class="menu-input part-of-select last-child"><p>ikea</p></div>
+                            </div>
+                        </div>
+                         <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
+                    </form>
+                </aside>
 			 <footer class="footer-style">
 				<p>infopulse courses dashboard &#64; 2016</p>
 			</footer>
 	 </div>
+        <script src="kalendae/kalendae.standalone.js" charset="utf-8"></script>
         <script src="scripts/script.js" charset="utf-8"></script>
-		<script src="kalendae/kalendae.standalone.js" charset="utf-8"></script>
 	</body>
 	
 </html>

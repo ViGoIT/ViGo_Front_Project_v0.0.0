@@ -5,21 +5,45 @@ window.onload = function() {
         allTh = document.querySelectorAll('thead th'),
         btnPlus = document.getElementById('btnPlus'),
         leftPanelDate = document.getElementById('leftPanelDate'),
-        getDate = getDate(),
         tableBody = document.getElementById('tableBody'),
         xhRequest = new XMLHttpRequest,
         urlToContent = 'json/content.json',
         contentToDOM = loadContent(),
         sortingOrderFlag = "",
+        changedRowsArr = [],
+        tableRowId,
+        searchField = document.getElementById('search'),
+        btnSearch = document.getElementsByClassName('btn-search')[0],
+        btnCreate = document.getElementsByClassName('btn-create')[0],
+        btnForMemebrs = document.getElementById('btnForMemebrs'),
+        btnForType = document.getElementById('btnForType'),
+        btnForCustomer = document.getElementById('btnForCustomer'),
+        selectMembers = document.getElementsByClassName('pseudo-select-members')[0],
+        selectType = document.getElementsByClassName('pseudo-select-type')[0],
+        selectCustomer = document.getElementsByClassName('pseudo-select-customer')[0],
+        rightPanelForm = document.getElementsByClassName('right-panel-form')[0],
         btnLeftPanel = document.getElementById('btnLeftPanel');
 
+
         /**add Listeners*/
-        for (var i = 0; i < allTh.length - 1; i++) {
+        for(var i=0; i<allTh.length-1; i++) {
             allTh[i].addEventListener("click", sortTable, false);
         }
+
             btnLeftPanel.addEventListener("click", moveLeftPanel, false);
             btnPlus.addEventListener("click", moveRightPanel, false);
             tableBody.addEventListener("click", closeRightPanel, false);
+            leftPanelDate.addEventListener("click", filterByDate, false);
+            btnSearch.addEventListener("click", searchText, false);
+            btnForMemebrs.addEventListener("click", expandMembers, false);
+            btnForType.addEventListener("click", expandType, false);
+            btnForCustomer.addEventListener("click", expandCustomer, false);
+            selectMembers.addEventListener("click", chooseOption, false);
+            selectType.addEventListener("click", chooseOption, false);
+            selectCustomer.addEventListener("click", chooseOption, false);
+            btnCreate.addEventListener("click", addToTable, false);
+        //*******************
+            getDate();
         //*******************
             function makeArr(nodeList) {
                 var arr = [];
@@ -30,6 +54,14 @@ window.onload = function() {
                 return arr;
             }
 
+            function clearClassName(nodeList) {
+
+                for(var i=0; i < nodeList.length; i++) {
+
+                    nodeList[i].className = "";
+                }
+            }
+
             function sortTable(event) {
                 var allTr = document.querySelectorAll('tbody tr');
                 var target = event.target,
@@ -37,7 +69,10 @@ window.onload = function() {
                     allTrArr = makeArr(allTr),
                     indexOfFirstTarget = allThArr.indexOf(target),
                     documentFragment = document.createDocumentFragment(),
+                    //order = (target.className === "" || target.className === "desc") ? "asc" : "desc";
                     order = (sortingOrderFlag === "" || sortingOrderFlag === "descending") ? "ascending" : "descending";
+
+                    //clearClassName(allTh);
 
                     allTrArr.sort(function (a, b) {
 
@@ -57,10 +92,56 @@ window.onload = function() {
                         documentFragment.appendChild(tr);
                     });
                     sortingOrderFlag = order;
+                    // target.className = order;
                     myTable.querySelector("tbody").appendChild(documentFragment);
             }
 
     //******************************************************************************************************************
+
+    function expandMembers(event) {
+        event.preventDefault();
+        if(selectMembers.style.display=='none' || selectMembers.style.display==""){
+            if((selectType.style.display=='none')&&(selectCustomer.style.display=='none')){
+                selectMembers.style.display='block';
+            } else {
+                selectType.style.display='none';
+                selectCustomer.style.display='none';
+                selectMembers.style.display='block';
+            }
+        } else {
+            selectMembers.style.display='none';
+        }
+    }
+
+    function expandType(event) {
+        event.preventDefault();
+        if(selectType.style.display=='none' || selectType.style.display==""){
+            if((selectMembers.style.display=='none')&&(selectCustomer.style.display=='none')){
+                selectType.style.display='block';
+            } else {
+                selectMembers.style.display='none';
+                selectCustomer.style.display='none';
+                selectType.style.display='block';
+            }
+        } else {
+            selectType.style.display='none';
+        }
+    }
+
+    function expandCustomer(event) {
+        event.preventDefault();
+        if(selectCustomer.style.display=='none' || selectCustomer.style.display==""){
+            if((selectMembers.style.display=='none')&&(selectType.style.display=='none')){
+                selectCustomer.style.display='block';
+            } else {
+                selectMembers.style.display='none';
+                selectType.style.display='none';
+                selectCustomer.style.display='block';
+            }
+        } else {
+            selectCustomer.style.display='none';
+        }
+    }
 
     function moveLeftPanel(){
         var display = window.getComputedStyle(asideLeftPanel,null).getPropertyValue('display');
@@ -74,6 +155,7 @@ window.onload = function() {
     }
 
     function closeRightPanel(){
+
         asideRightPanel.classList.remove('visibility-visible');
     }
 
@@ -169,20 +251,111 @@ window.onload = function() {
             newBtn = document.createElement('button');
             newBtn.className = 'btn-recycle';
             newRowId.lastChild.appendChild(newBtn);
+            newBtn.addEventListener( "click" , removeFromDOM, false)
 
 
         }
-       // checkDueDate();
+        checkDueDate();
     }
+
+    function parseDate(arg){
+        var tempArr = arg.split('-'),
+            savedFirstElement = tempArr[0];
+
+            tempArr[0] = tempArr[1];
+            tempArr[1] = savedFirstElement;
+        var parsedDate = (tempArr.join('/'));
+        return Date.parse(parsedDate);
+    }
+
 
     function checkDueDate() {
-        var allTrs = document.querySelectorAll('tbody tr'),
-            dueDateArr=[];
-        for(i=0;i<allTrs.length;i++)
+        var allTr = document.querySelectorAll('tbody tr'),
+            parsedCurrentDate = Date.parse(getDate()),
+            allTrArr = makeArr(allTr);
+
+        for(i=0;i<allTrArr.length;i++)
         {
-            (allTrs[i].childNodes[1].textContent);
+            var parsedDueDate = parseDate(allTrArr[i].childNodes[1].textContent);
+                if(parsedDueDate<parsedCurrentDate){
+                    var tableRowId = document.getElementById('tableRow0'+(i+1));
+                     tableRowId.style.backgroundColor = '#6f0d0f';
+                     tableRowId.firstElementChild.style.backgroundImage = "none";
+                }
         }
 
     }
+
+    function searchText(){
+        var str = tableBody.textContent;
+        if(searchField.value!=""){
+            var charArray = searchField.value.split(""),
+                pattern = new RegExp(searchField.value, "gi"),
+                match = str.match(pattern);
+        }
+
+    }
+
+    function filterByDate(event) {
+        debugger;
+        var target = event.target,
+            allTr = document.querySelectorAll('tbody tr'),
+            parsedTargetValue = Date.parse(target.value),
+            allTrArr = makeArr(allTr);
+        if (target.value != "") {
+            for (i = 0; i < allTrArr.length; i++) {
+                var parsedDueDate = parseDate(allTrArr[i].childNodes[1].textContent),
+                    parsedCreatedDate = parseDate(allTrArr[i].childNodes[2].textContent);
+                if ((parsedCreatedDate > parsedTargetValue) || (parsedTargetValue > parsedDueDate)) {
+                    tableRowId = document.getElementById('tableRow0' + (i + 1));
+                    changedRowsArr.push(tableRowId);
+                    tableRowId.style.display = "none";
+                }
+                // else {
+                //
+                // }
+            }
+        } else {
+            return;
+            // for (var i = 0; i < changedRowsArr.length; i++) {
+            //     tableRowId[i].style.display = "";
+            // }
+        }
+    }
+
+    function removeFromDOM(){
+        this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+    }
+
+    function chooseOption(event){
+
+        var target = event.target;
+        if(target.tagName=='P'){
+            this.previousSibling.previousElementSibling.value = target.innerText;
+            this.style.display = "none";
+        }
+    }
+
+
+    function closePseudoSelects(){
+        for(var i=0; i<pseudoSelect.length; i++){
+            if(pseudoSelect[i].style.display!="none"){
+                pseudoSelect[i].style.display="none"
+            }
+        }
+    }
+
+    function showPseudoSelect(event){
+
+        closePseudoSelects();
+        var target = event.target;
+        this.parentElement.style.display="block";
+    }
+
+    function addToTable(event) {
+        event.preventDefault();
+        alert("А тут маленькі звірятка добавляють дані в таблицю. ))))");
+    }
+
     //******************************************************************************************************************
 }

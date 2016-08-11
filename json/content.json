@@ -39,7 +39,7 @@
 	 "projectName" : "Epsilon",
 	 "dueDate" : "01-03-2016",
 	 "created" : "01-06-2016",
-	 "members" : "Arnoldq",
+	 "members" : "Sylvester",
 	 "type" : "web",
 	 "status" : "closed",
 	 "customer" : "evry"
@@ -48,43 +48,43 @@
 	 "projectName" : "Zeta",
 	 "dueDate" : "01-03-2016",
 	 "created" : "01-06-2016",
-	 "members" : "Arnoldw",
+	 "members" : "Arnold",
 	 "type" : "web",
 	 "status" : "closed",
 	 "customer" : "evry"
 	 },
 	 {
 	 "projectName" : "Eta",
-	 "dueDate" : "01-03-2016",
-	 "created" : "01-06-2016",
-	 "members" : "Arnolde",
+	 "dueDate" : "01-09-2016",
+	 "created" : "11-06-2016",
+	 "members" : "Dolph",
 	 "type" : "web",
-	 "status" : "closed",
+	 "status" : "in-progress",
 	 "customer" : "evry"
 	 },
 	 {
 	 "projectName" : "Theta",
-	 "dueDate" : "01-03-2016",
-	 "created" : "01-06-2016",
-	 "members" : "Arnoldr",
-	 "type" : "web",
-	 "status" : "closed",
+	 "dueDate" : "01-10-2016",
+	 "created" : "01-07-2016",
+	 "members" : "Arnold",
+	 "type" : "mobile",
+	 "status" : "in-progress",
 	 "customer" : "evry"
 	 },
 	 {
 	 "projectName" : "Iota",
-	 "dueDate" : "01-03-2016",
+	 "dueDate" : "01-09-2016",
 	 "created" : "01-06-2016",
-	 "members" : "Arnoldt",
-	 "type" : "web",
-	 "status" : "closed",
+	 "members" : "Jean-Claude",
+	 "type" : "desktop",
+	 "status" : "new",
 	 "customer" : "evry"
 	 },
 	 {
 	 "projectName" : "Kappa",
 	 "dueDate" : "01-07-2016",
 	 "created" : "31-07-2016",
-	 "members" : "Arnoldy",
+	 "members" : "Arnold",
 	 "type" : "desktop",
 	 "status" : "closed",
 	 "customer" : "evry"
@@ -93,18 +93,27 @@
 	 "projectName" : "Lambda",
 	 "dueDate" : "01-03-2016",
 	 "created" : "01-06-2016",
-	 "members" : "Arnoldu",
+	 "members" : "Dolph",
 	 "type" : "mobile",
 	 "status" : "closed",
 	 "customer" : "evry"
 	 },
 	 {
 	 "projectName" : "Mu",
-	 "dueDate" : "01-03-2016",
-	 "created" : "01-06-2016",
-	 "members" : "Arnoldi",
+	 "dueDate" : "01-11-2016",
+	 "created" : "01-01-2016",
+	 "members" : "Jean-Claude",
 	 "type" : "web",
 	 "status" : "closed",
+	 "customer" : "evry"
+	 },
+	 {
+	 "projectName" : "Mu",
+	 "dueDate" : "01-11-2016",
+	 "created" : "01-01-2016",
+	 "members" : "Sylvester",
+	 "type" : "desktop",
+	 "status" : "in-progress",
 	 "customer" : "evry"
 	 }
 ]

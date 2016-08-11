@@ -20,7 +20,6 @@ body{
 	line-height: 1.5;
 	min-height: 100%;
 	position: relative;
-
 }
 
 input[type=checkbox] {
@@ -100,6 +99,12 @@ th,
 .set-font-weight-to-regular{
 	font-weight: normal;
 }
+.part-of-select{
+	cursor: pointer;
+}
+p.part-of-select{
+	cursor: pointer;
+}
 /*----------------Selectors----by----class*/
 .tr-hover:nth-child(even){
     background: #0f1012;	
@@ -118,13 +123,12 @@ th,
 	max-width: 2400px;
 	height: 100%;
 	position: relative;
+	z-index: 5;
 }
 
 .table-data{
     font: 1.125rem/1.5 OpenSans, Verdana, Arial, Tahoma, sans-serif;
 	background: none;
-	/*min-width: 768px;*/
-	/*max-width: 1728px;*/
 	min-width: 700px;
 	max-width: 1800px;
     float: left;    
@@ -135,8 +139,6 @@ th,
 	table-layout: fixed;
 	border-collapse: separate;
 	border-spacing: 0px 8px;
-	/*margin: 0 auto;*/
-	/*z-index: 1;*/
 }
 
 .table-hr-line{
@@ -167,6 +169,7 @@ tr.reset-background{
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 1000;
 }
 
 th.left-column{
@@ -186,7 +189,7 @@ th.left-column{
 }
 
 .aside-panels{
-	min-height: 93%;
+	min-height: 92.9%;
 	width: 19%;
 	min-width: 240px;
 	max-width: 300px;
@@ -256,11 +259,11 @@ th.left-column{
 }
 
 .left-panel-top-form{
-	padding-top: 50%;
+	padding-top: 35%;
 }
 
 .right-panel-form{
-	padding-top: 50%;
+	padding-top: 35%;
 }
 
 .checkbox-field{
@@ -288,6 +291,10 @@ th.left-column{
 	margin-bottom: 0.7em;
 	width: 48%;
 	float: left;
+}
+
+.part-of-select:hover{
+	background-color: #353e44;
 }
 
 .tr-hover:hover td{
@@ -387,7 +394,6 @@ th.left-column{
 
 #asideRightPanel{
 	position: absolute;
-	/*z-index: 2;*/
 	top:0;
 	right: 0;
 	visibility: hidden;
