@@ -1,123 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>"Hello World" Team Projects</title>
-		<link rel="Stylesheet" href="css/reset.css" type="text/css"/>
-		<link rel="stylesheet" href="kalendae/kalendae.css" type="text/css" charset="utf-8">
-		<link rel="Stylesheet" href="css/style.css" type="text/css"/>
-	</head>
-	<body>
-	<!--section should include <h1-h6>, that is why I have changed it to <div>-->
-	 <div id="envelope" class="envelope">
-                    <button id="btnLeftPanel" class="btn-left-panel"></button>
-					<aside id="asideLeftPanel" class="aside-panels aside-left-panel">
+<head>
+    <meta charset="UTF-8"/>
+    <title>"Hello World" Team Projects</title>
+    <link rel="Stylesheet" href="css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="kalendae/kalendae.css" type="text/css" charset="utf-8">
+    <link rel="Stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body>
+<!--section should include <h1-h6>, that is why I have changed it to <div>-->
+<div id="envelope" class="envelope">
+    <button id="btnLeftPanel" class="btn-left-panel"></button>
+    <aside id="asideLeftPanel" class="aside-panels aside-left-panel">
 
-						<form class="left-panel-top-form" novalidate action="#">
-							<div class="position-relative">
-								<button class="btn-search"></button>
-								<input class="menu-input" placeholder="search:" type="search" id="search" name="search" pattern="[.{3,}]" />
-							</div>
-						</form>
-						<form action="#" method="post">
-							<fieldset class="checkbox-field menu-input">
-								<div class="checkbox-left-panel">
-									<input id="web-cbox" class="checkbox-style" type="checkbox" name="web-project" value="web"/>
-									<label for="web-cbox"><span>web</span></label>
-								</div>
-								<div class="checkbox-left-panel">
-									<input id="desktop-cbox" type="checkbox" name="desktop-project" value="desktop"/>
-									<label for="desktop-cbox"><span>desktop</span></label>
-								</div>
-								<div class="checkbox-left-panel">
-									<input id="mobile-cbox" type="checkbox" name="mobile-project" value="mobile"/>
-									<label for="mobile-cbox"><span>mobile</span></label>
-								</div>
-								<div class="checkbox-left-panel">
-									<input id="support-cbox" type="checkbox" name="support-project" value="support"/>
-									<label for="support-cbox"><span>support</span></label>
-								</div>
-							</fieldset>
-							<div class="position-relative">
-								<label for="leftPanelDate"><img class="btn-date"/></label>
-								<!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-								<input id="leftPanelDate" class="menu-input auto-kal" type="text" name="left-menu-project-date" maxlength="15"/>
-							</div>
-						</form>
-					</aside>
-            <table id="tableData" class="table-data">
-					<thead class="th-cells-color">
-						<tr class="table-head-style">
-							<th class="left-column">project name</th>
-							<th>due date</th>
-							<th>created</th>
-							<th>members</th>
-							<th>type</th>
-							<th>status</th>
-							<th>customer</th>
-							<th>
-								<button id="btnPlus" class="btn-plus"></button>
-							</th>
-						</tr>
-						<tr class="reset-background table-head-style"></tr>
+        <form class="left-panel-top-form" novalidate action="#">
+            <div class="position-relative">
+                <button class="btn-search"></button>
+                <input class="menu-input" placeholder="search:" type="search" id="search" name="search"
+                       pattern="[.{3,}]">
+            </div>
+        </form>
+        <form action="#" method="post">
+            <fieldset class="checkbox-field menu-input">
+                <div class="checkbox-left-panel">
+                    <input id="web-cbox" class="checkbox-style" type="checkbox" name="web-project" value="web">
+                    <label for="web-cbox"><span>web</span></label>
+                </div>
+                <div class="checkbox-left-panel">
+                    <input id="desktop-cbox" type="checkbox" name="desktop-project" value="desktop">
+                    <label for="desktop-cbox"><span>desktop</span></label>
+                </div>
+                <div class="checkbox-left-panel">
+                    <input id="mobile-cbox" type="checkbox" name="mobile-project" value="mobile">
+                    <label for="mobile-cbox"><span>mobile</span></label>
+                </div>
+                <div class="checkbox-left-panel">
+                    <input id="support-cbox" type="checkbox" name="support-project" value="support">
+                    <label for="support-cbox"><span>support</span></label>
+                </div>
+            </fieldset>
+            <div class="position-relative">
+                <label for="leftPanelDate"><img class="btn-date"/></label>
+                <!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
+                <input id="leftPanelDate" class="menu-input auto-kal" type="text" name="left-menu-project-date"
+                       maxlength="15">
+            </div>
+        </form>
+    </aside>
+    <table id="tableData" class="table-data">
+        <thead class="th-cells-color">
+        <tr class="table-head-style">
+            <th class="left-column">project name</th>
+            <th>due date</th>
+            <th>created</th>
+            <th>members</th>
+            <th>type</th>
+            <th>status</th>
+            <th>customer</th>
+            <th>
+                <button id="btnPlus" class="btn-plus"></button>
+            </th>
+        </tr>
+        <tr class="reset-background table-head-style"></tr>
 
-					</thead>
-				<tbody id="tableBody" class="table-body-style">
-				    <!--function pasteContentToDOM-->
-				</tbody>
-				</table>
-                <aside id="asideRightPanel" class="aside-panels aside-right-panel">
-                    <form class="right-panel-form" action="#">
-                         <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name" maxlength="22" pattern="(?!.*\d.*)(?!.*\s.*).*"/><!--(no digits)(no space)all characters zero or more-->
-                        <!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-                        <div class="position-relative">
-                                <label for="inputDueDate"><img class="btn-date"/></label>
-                                <input id="inputDueDate" class="menu-input auto-kal" type="text" placeholder="due date" name="right-menu-due-date" maxlength="15"/>
-                        </div>
-                        <!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
-                        <div class="position-relative">
-                            <label for="inputCreatedDate"><img class="btn-date"/></label>
-                             <input id="inputCreatedDate" class="menu-input auto-kal" type="text" placeholder="created" name="right-menu-created" maxlength="15"/>
-                        </div>
-                        <div class="pseudo-select-field">
-                            <button id="btnForMemebrs" class="btn-expand"></button>
-                            <input id="inputMembers" class="menu-input" type="text" placeholder="members:" name="right-menu-members" readonly>
-                            <div class="pseudo-select-members pseudo-select">
-                                <div class="menu-input part-of-select first-child"><p>Arnold</p></div>
-                                <div class="menu-input part-of-select"><p>Sylvester</p></div>
-                                <div class="menu-input part-of-select"><p>Jean-Claude</p></div>
-                                <div class="menu-input part-of-select last-child"><p>Dolph</p></div>
-                            </div>
-                        </div>
-                        <div class="pseudo-select-field">
-                            <button id="btnForType" class="btn-expand"></button>
-                            <input class="menu-input" type="text" placeholder="type:" name="right-menu-select-type" readonly>
-                            <div class="pseudo-select-type pseudo-select">
-                                <div class="menu-input part-of-select first-child"><p>web</p></div>
-                                <div class="menu-input part-of-select"><p>desktop</p></div>
-                                <div class="menu-input part-of-select"><p>mobile</p></div>
-                                <div class="menu-input part-of-select last-child"><p>support</p></div>
-                            </div>
-                        </div>
-                        <div class="pseudo-select-field">
-                            <button id="btnForCustomer" class="btn-expand"></button>
-                            <input class="menu-input" type="text" placeholder="customer:" name="right-menu-select-customer" readonly>
-                            <div class="pseudo-select-customer pseudo-select">
-                                <div class="menu-input part-of-select first-child"><p>evry</p></div>
-                                <div class="menu-input part-of-select"><p>volvo</p></div>
-                                <div class="menu-input part-of-select"><p>electrolux</p></div>
-                                <div class="menu-input part-of-select last-child"><p>ikea</p></div>
-                            </div>
-                        </div>
-                         <input class="menu-input btn-create" type="submit" name="btn-create" value="create"/>
-                    </form>
-                </aside>
-			 <footer class="footer-style">
-				<p>infopulse courses dashboard &#64; 2016</p>
-			</footer>
-	 </div>
-        <script src="kalendae/kalendae.standalone.js" charset="utf-8"></script>
-        <script src="scripts/script.js" charset="utf-8"></script>
-	</body>
-	
+        </thead>
+        <tbody id="tableBody" class="table-body-style">
+        <!--function pasteContentToDOM-->
+        </tbody>
+    </table>
+    <aside id="asideRightPanel" class="aside-panels aside-right-panel">
+        <form class="right-panel-form" action="#">
+            <input class="menu-input" type="text" placeholder="project name:" name="right-menu-project-name"
+                   maxlength="22" pattern="(?!.*\d.*)(?!.*\s.*).*">
+            <!--(no digits)(no space)all characters zero or more-->
+            <!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
+            <div class="position-relative">
+                <label for="inputDueDate"><img class="btn-date"/></label>
+                <input id="inputDueDate" class="menu-input auto-kal" type="text" placeholder="due date"
+                       name="right-menu-due-date" maxlength="15">
+            </div>
+            <!--I'm still about to use input-type="text", because don't see a sense to use both input-type=date and JS datapicker -->
+            <div class="position-relative">
+                <label for="inputCreatedDate"><img class="btn-date"/></label>
+                <input id="inputCreatedDate" class="menu-input auto-kal" type="text" placeholder="created"
+                       name="right-menu-created" maxlength="15">
+            </div>
+            <div class="pseudo-select-field">
+                <button id="btnForMemebrs" class="btn-expand"></button>
+                <input id="inputMembers" class="menu-input" type="text" placeholder="members:" name="right-menu-members"
+                       readonly>
+                <div class="pseudo-select-members pseudo-select">
+                    <div class="menu-input part-of-select first-child"><p>Arnold</p></div>
+                    <div class="menu-input part-of-select"><p>Sylvester</p></div>
+                    <div class="menu-input part-of-select"><p>Jean-Claude</p></div>
+                    <div class="menu-input part-of-select last-child"><p>Dolph</p></div>
+                </div>
+            </div>
+            <div class="pseudo-select-field">
+                <button id="btnForType" class="btn-expand"></button>
+                <input class="menu-input" type="text" placeholder="type:" name="right-menu-select-type" readonly>
+                <div class="pseudo-select-type pseudo-select">
+                    <div class="menu-input part-of-select first-child"><p>web</p></div>
+                    <div class="menu-input part-of-select"><p>desktop</p></div>
+                    <div class="menu-input part-of-select"><p>mobile</p></div>
+                    <div class="menu-input part-of-select last-child"><p>support</p></div>
+                </div>
+            </div>
+            <div class="pseudo-select-field">
+                <button id="btnForCustomer" class="btn-expand"></button>
+                <input class="menu-input" type="text" placeholder="customer:" name="right-menu-select-customer"
+                       readonly>
+                <div class="pseudo-select-customer pseudo-select">
+                    <div class="menu-input part-of-select first-child"><p>evry</p></div>
+                    <div class="menu-input part-of-select"><p>volvo</p></div>
+                    <div class="menu-input part-of-select"><p>electrolux</p></div>
+                    <div class="menu-input part-of-select last-child"><p>ikea</p></div>
+                </div>
+            </div>
+            <input class="menu-input btn-create" type="submit" name="btn-create" value="create">
+        </form>
+    </aside>
+    <footer class="footer-style">
+        <p>infopulse courses dashboard &#64; 2016</p>
+    </footer>
+</div>
+<script src="kalendae/kalendae.standalone.js" charset="utf-8"></script>
+<script src="scripts/script.js" charset="utf-8"></script>
+</body>
+
 </html>
